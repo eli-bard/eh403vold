@@ -1,12 +1,12 @@
 import { Heading } from "@/components/Heading";
 import { CopyCheck } from "lucide-react";
 
-export default function Calculadoras() {
+export default function Casos() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Heading
-        title="Flashcards"
-        description="Faça flashcards em poucos minutos utilizando seus resumos e nossa IA AnkiForge"
+        title="Simulador de casos"
+        description="Avalie seus conhecimentos com o simulador de casos clínicos"
         icon={CopyCheck}
         iconColor="text-orange-300"
         bgColor="bg-violet-500/10"

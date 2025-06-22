@@ -1,7 +1,7 @@
 import { Heading } from "@/components/Heading";
 import { Settings } from "lucide-react";
 
-export default function Calculadoras() {
+export default function Suporte() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Heading

@@ -49,9 +49,9 @@ const routes = [
     color: "text-pink-700",
   },
   {
-    label: "Faça flashcards",
+    label: "Simulador de casos",
     icon: CopyCheck,
-    href: "/flashcards",
+    href: "/casos",
     color: "text-orange-300",
   },
   {
