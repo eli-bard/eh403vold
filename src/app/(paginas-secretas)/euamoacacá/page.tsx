@@ -33,14 +33,11 @@ export default function LoveCounter() {
   const [showPhotos, setShowPhotos] = useState(false);
 
   // Data do início do relacionamento: 07/09/24 às 20:43
-  const startDate = new Date(2024, 8, 7, 20, 43, 0);
+  const startDate = new Date(2024, 8, 7, 22, 07, 0);
 
   // Array de fotos - substitua pelos seus arquivos reais
   const photos = [
-    "/meuamor0.jpeg",
-    "/meuamor1.jpeg",
-    "/meuamor2.jpeg",
-    // Adicione mais fotos conforme necessário
+    "/meuamor0.jpeg"
   ];
 
   useEffect(() => {
@@ -95,7 +92,7 @@ export default function LoveCounter() {
               Nosso Amor
               <Heart className="w-8 h-8 fill-rose-500 text-rose-500" />
             </CardTitle>
-            <p className="text-lg text-pink-700">Desde 07/09/2024 às 20:43</p>
+            <p className="text-lg text-pink-700">Desde antes do dia 07/09/2024 às 22:07</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
