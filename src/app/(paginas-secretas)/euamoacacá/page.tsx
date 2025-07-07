@@ -33,7 +33,7 @@ export default function LoveCounter() {
   const [showPhotos, setShowPhotos] = useState(false);
 
   // Data do início do relacionamento: 07/09/24 às 20:43
-  const startDate = new Date(2024, 8, 7, 22, 07, 0);
+  const startDate = new Date(2024, 8, 7, 22, 7, 0);
 
   // Array de fotos - substitua pelos seus arquivos reais
   const photos = [
@@ -173,6 +173,10 @@ export default function LoveCounter() {
           </CardFooter>
         </Card>
 
+<section>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2QjvyH0qo2o8qSj76d5x1C?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</section>
+        
         <p className="text-center mt-6 text-pink-700 italic flex items-center justify-center gap-1">
           <Heart className="w-4 h-4 fill-pink-500 text-pink-500" />
           Cada segundo contigo é especial
