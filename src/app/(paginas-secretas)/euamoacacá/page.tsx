@@ -131,6 +131,16 @@ export default function LoveCounter() {
               </Button>
             </div>
 
+            <Button 
+                variant="outline" 
+                className="bg-green-500 hover:bg-green-600 text-white border-green-600 flex items-center gap-2"
+                onClick={() => setShowPlaylist(!showPlaylist)}
+              >
+                <Music className="w-4 h-4" />
+                {showPlaylist ? 'Esconder Playlist' : 'Nossa Playlist'}
+              </Button>
+            </div>
+          
             {showPhotos && photos.length > 0 && (
               <div className="mt-6 relative group">
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-rose-300">
@@ -160,6 +170,20 @@ export default function LoveCounter() {
                 </Button>
               </div>
             )}
+
+          {showPlaylist && (
+              <div className="mt-6 rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://open.spotify.com/embed/playlist/2QjvyH0qo2o8qSj76d5x1C?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="380" 
+                  frameBorder="0" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            )}
           </CardContent>
 
           <CardFooter className="flex justify-center">
@@ -172,10 +196,6 @@ export default function LoveCounter() {
             </Button>
           </CardFooter>
         </Card>
-
-<section>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2QjvyH0qo2o8qSj76d5x1C?utm_source=generator" width="70%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</section>
         
         <p className="text-center mt-6 text-pink-700 italic flex items-center justify-center gap-1">
           <Heart className="w-4 h-4 fill-pink-500 text-pink-500" />
