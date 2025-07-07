@@ -18,7 +18,7 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, Music } from "lucide-react";
 
 export default function LoveCounter() {
   const [timeTogether, setTimeTogether] = useState({
@@ -31,13 +31,15 @@ export default function LoveCounter() {
 
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [showPhotos, setShowPhotos] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(false);
 
-  // Data do início do relacionamento: 07/09/24 às 20:43
+  // Data do início do relacionamento: 07/09/24 às 22:07
   const startDate = new Date(2024, 8, 7, 22, 7, 0);
 
   // Array de fotos - substitua pelos seus arquivos reais
   const photos = [
-    "/meuamor0.jpeg"
+    "/meuamor0.jpeg",
+    // Adicione mais fotos conforme necessário
   ];
 
   useEffect(() => {
@@ -84,7 +86,8 @@ export default function LoveCounter() {
         <meta name="description" content="Contador do nosso amor" />
       </Head>
 
-      <main className="w-full max-w-2xl mx-auto">
+      <main className="w-full max-w-2xl mx-auto space-y-6">
+        {/* Card Principal */}
         <Card className="shadow-lg border-0 bg-white/90 backdrop-blur-sm">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold text-rose-600 flex items-center justify-center gap-2">
@@ -92,7 +95,7 @@ export default function LoveCounter() {
               Nosso Amor
               <Heart className="w-8 h-8 fill-rose-500 text-rose-500" />
             </CardTitle>
-            <p className="text-lg text-pink-700">Desde antes do dia 07/09/2024 às 22:07</p>
+            <p className="text-lg text-pink-700">Desde antes de 07/09/2024 às 22:07</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
@@ -121,26 +124,25 @@ export default function LoveCounter() {
               ))}
             </div>
 
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center gap-4 mt-6">
               <Button
                 variant="outline"
                 className="bg-rose-500 hover:bg-rose-600 text-white border-rose-600"
                 onClick={() => setShowPhotos(!showPhotos)}
               >
-                {showPhotos ? "Esconder Fotos" : "Mostrar Nossas Fotos"}
+                {showPhotos ? "Esconder Fotos" : "Mostrar Fotos"}
               </Button>
-            </div>
 
-            <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="bg-green-500 hover:bg-green-600 text-white border-green-600 flex items-center gap-2"
                 onClick={() => setShowPlaylist(!showPlaylist)}
               >
                 <Music className="w-4 h-4" />
-                {showPlaylist ? 'Esconder Playlist' : 'Nossa Playlist'}
+                {showPlaylist ? "Esconder Playlist" : "Nossa Playlist"}
               </Button>
             </div>
-          
+
             {showPhotos && photos.length > 0 && (
               <div className="mt-6 relative group">
                 <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-rose-300">
@@ -171,13 +173,13 @@ export default function LoveCounter() {
               </div>
             )}
 
-          {showPlaylist && (
+            {showPlaylist && (
               <div className="mt-6 rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://open.spotify.com/embed/playlist/2QjvyH0qo2o8qSj76d5x1C?utm_source=generator&theme=0" 
-                  width="100%" 
-                  height="380" 
-                  frameBorder="0" 
+                <iframe
+                  src="https://open.spotify.com/embed/playlist/2QjvyH0qo2o8qSj76d5x1C?utm_source=generator&theme=0"
+                  width="100%"
+                  height="380"
+                  frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                   className="rounded-lg"
@@ -196,8 +198,8 @@ export default function LoveCounter() {
             </Button>
           </CardFooter>
         </Card>
-        
-        <p className="text-center mt-6 text-pink-700 italic flex items-center justify-center gap-1">
+
+        <p className="text-center text-pink-700 italic flex items-center justify-center gap-1">
           <Heart className="w-4 h-4 fill-pink-500 text-pink-500" />
           Cada segundo contigo é especial
           <Heart className="w-4 h-4 fill-pink-500 text-pink-500" />
