@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Heading } from "@/components/generalui/Heading";
+import { Heading } from "@/components/Heading";
 import CalculatorCard from "@/components/myui/CalculatorCard";
 import { calculators } from "@/components/myui/calculators";
 import { Calculator, Filter, Search } from "lucide-react";
