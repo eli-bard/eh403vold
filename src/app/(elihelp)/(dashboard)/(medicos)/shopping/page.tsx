@@ -114,8 +114,7 @@ export default function Shopping() {
 
           <div className="bg-yellow-50 p-4 rounded-lg mb-8">
             <p className="text-yellow-900">
-              Somos afiliados e podemos receber uma comissão por algumas das
-              compras.
+              Aqui apenas indicamos. Os produtos aqui indicados são ou foram usados pelo criador ou algum colega. Não nos responsabilizamos pela qualidade dos produtos atualmente.
             </p>
           </div>
         </div>
